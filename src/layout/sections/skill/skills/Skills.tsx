@@ -25,14 +25,16 @@ export const Skills = (props: SkillsTypeProps) => {
   );
 };
 
-const Title = styled.span`
+const Title = styled.h3`
   font-size: 24px;
   font-weight: 600;
   color: #ffff;
+  display: flex;
 `;
 
 const MainDiv = styled.div`
-
+max-width:900px;
+width:100%
 `;
 
 const animatePositive = (width: number) => keyframes`
@@ -45,7 +47,7 @@ const animatePositive = (width: number) => keyframes`
 `;
 
 const StyledIndicator = styled.div`
-  max-width: 900px;
+
   height: 18px;
   border-radius: 83px;
   margin-bottom: 20px;

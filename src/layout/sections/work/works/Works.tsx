@@ -34,7 +34,7 @@ border:1px solid rgba(163, 157, 157, 1);
     display: flex;
     flex-direction:column;
     align-items:flex-start;
-    
+    padding:25px;
 
 
     
@@ -48,18 +48,19 @@ const Image = styled.img`
      border-bottom-right-radius:8px;
      border-bottom-left-radius:8px;
      border-top-right-radius:8px;
-     
+     margin-bottom:40px;
      
      
    
 `
 const Title = styled.h3`
     font-size: 30px;
-    margin:0 auto
+    margin:0 auto;
+    margin-bottom:67px;
 `
 const Text = styled.p`
-    padding:0 25px;
     font-size: 18px;
+    margin-bottom:50px;
 `
 const Link = styled.a`
 font-size:20px;
@@ -67,7 +68,6 @@ transition: transform 0.3s ease-in-out;
 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
 min-height:60px;
 min-width:200px ;
-margin-left:25px;
 display: flex;
 justify-content:center;
 align-items:center;

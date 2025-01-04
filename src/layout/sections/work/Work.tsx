@@ -11,7 +11,7 @@ export const Work = () => {
         <StyledWork>
         <Container> 
         <SectionTitle>Projects</SectionTitle>       
-        <FlexWrapper gap='40px' wrap='wrap' justify='space-between' >
+        <FlexWrapper gap='40px' wrap='wrap'  >
             
             <Works src={foto} title={'PROJECT 1'} text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}/>
             <Works src={foto} title={'PROJECT 2'} text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}/>

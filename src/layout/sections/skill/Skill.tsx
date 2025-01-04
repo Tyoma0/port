@@ -12,7 +12,7 @@ export const Skill = () => {
         <StyledSkill>
             <Container>
             <SectionTitle>Technologies</SectionTitle>
-            <FlexWrapper direction='column'>
+            <FlexWrapper direction='column' align='center'>
               <Skills text='Html' width={78} />
               <Skills text='Css, Sass' width={68} />
               <Skills text='React' width={53} />
@@ -23,9 +23,9 @@ export const Skill = () => {
             <StyledDiv>
             <StyledSpan>Additional technolgies and skills</StyledSpan>
             <StyledUl>
-                <StyledLi><Icon width='150' height='150'  iconId={'group'}/></StyledLi>
-                <StyledLi><Icon width='150' height='150' iconId={'gitHub2'}/></StyledLi>
-                <StyledLi><Icon width='150' height='150' iconId={'skill'}/></StyledLi>
+                <StyledLi><Icon width='100' height='100' viewBox="0 0 100 100"  iconId={'group'}/></StyledLi>
+                <StyledLi><Icon width='100' height='100' viewBox="0 0 100 100" iconId={'gitHub2'}/></StyledLi>
+                <StyledLi><Icon width='100' height='100' viewBox="0 0 100 100" iconId={'skill'}/></StyledLi>
             </StyledUl>
             </StyledDiv>
             </Container>                                   
@@ -41,16 +41,22 @@ export const Skill = () => {
  const StyledDiv = styled.div`
    display: flex;
    flex-direction:column;
-   align-items:center
+   align-items:center;
+   margin-top:120px
     
  `
  const StyledSpan = styled.span`
     font-size:44px;
+    margin-bottom:70px
  `
   const StyledUl = styled.ul`
     display: flex;
+    align-items:flex-start;
+    gap:50px;
+
     
   `
    const StyledLi = styled.li`
+    
     
    `
