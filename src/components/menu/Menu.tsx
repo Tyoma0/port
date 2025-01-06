@@ -1,5 +1,6 @@
 
 import styled from 'styled-components';
+import { theme } from '../../styles/Theme';
 
 
 
@@ -21,7 +22,7 @@ export const Menu = (props: {menuItems:Array<string>}) => {
 const StyledMenu = styled.nav`
     ul{
         display: flex;
-        gap:81px;
+        gap:75px;
     }
     li{
         transition: transform 0.3s ease-in-out;
@@ -35,6 +36,9 @@ const StyledMenu = styled.nav`
             color: transparent; /* Стандартное свойство для прозрачного текста */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Добавляем тень */
     }
- 
+
+     @media ${theme.media.tablet} {
+        display:none
+     }
     
-` 
+`

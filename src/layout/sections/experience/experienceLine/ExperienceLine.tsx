@@ -1,67 +1,80 @@
-
 import styled from 'styled-components';
 import { TextLine } from './textLine/TextLine';
 
 export const ExperienceLine = () => {
     return (
         <MainDiv>
-        <Timeline>
-        <TimelinePoint>
-        <TimelineDate>2017</TimelineDate>
-        <TextLine text='Lorem dolor sit amet, consectetur adipiscing elit, sed dempor incididunt ut labore et dolore magna adipiscin'/>
-    </TimelinePoint>
-    <TimelinePoint>
-        <TimelineDate>2019</TimelineDate>
-        <TextLine text='Lorem dolor sit amet, consectetur adipiscing elit, sed dempor incididunt ut labore et dolore magna adipiscin'/>
-    </TimelinePoint>
-    <TimelinePoint>
-        <TimelineDate>2021</TimelineDate>
-        <TextLine text='Lorem dolor sit amet, consectetur adipiscing elit, sed dempor incididunt ut labore et dolore magna adipiscin'/>
-    </TimelinePoint>
-    <TimelinePoint>
-        <TimelineDate>2023</TimelineDate>
-        <TextLine text='Lorem dolor sit amet, consectetur adipiscing elit, sed dempor incididunt ut labore et dolore magna adipiscin'/>
-    </TimelinePoint>
-        </Timeline>
+            <Timeline>
+                <TimelineItem>
+                    <TimelineDate>2017</TimelineDate>
+                    <TextLine text='Lorem dolor sit amet, consectetur adipiscing elit, sed dempor incididunt ut labore et dolore magna adipiscin'/>
+                </TimelineItem>
+
+                <TimelineItem>
+                    <TimelineDate>2019</TimelineDate>
+                    <TextLine text='Lorem dolor sit amet, consectetur adipiscing elit, sed dempor incididunt ut labore et dolore magna adipiscin'/>
+                </TimelineItem>
+
+                <TimelineItem>
+                    <TimelineDate>2021</TimelineDate>
+                    <TextLine text='Lorem dolor sit amet, consectetur adipiscing elit, sed dempor incididunt ut labore et dolore magna adipiscin'/>
+                </TimelineItem>
+
+                <TimelineItem>
+                    <TimelineDate>2023</TimelineDate>
+                    <TextLine text='Lorem dolor sit amet, consectetur adipiscing elit, sed dempor incididunt ut labore et dolore magna adipiscin'/>
+                </TimelineItem>
+            </Timeline>
         </MainDiv>
-       
     );
 };
 
 const MainDiv = styled.div`
-    display: flex;
-    align-items:center;
-    justify-content:center
-`
+   
+  
+`;
 
 const Timeline = styled.div`
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    width: 880px;
+    display: flex; 
     position: relative;
-    background-color:#ffff;
-    max-height:8px;
-    background: linear-gradient(to right, #945dd6, #6978d1, #13adc7);        
     
-`
-const TimelinePoint = styled.div`
-    position: relative;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50% );
+        width: 100%;
+        height: 8px; 
+        background: linear-gradient(to bottom, #945dd6, #6978d1, #13adc7);
+        z-index: 1;
+    }          
+`;
+
+const TimelineItem = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 1;
-    background-color:#ffff;
-    max-width:25px;
-    max-height:25px;
-    border-radius:50%
-`
-const TimelineDate = styled.span`
-    font-weight: bold;    
-    text-align: center; 
-    position: absolute;
-    top:-140%;
-    font-size:26px;
-    
+    position: relative;
+    z-index: 999999;
+`;
 
-    `
+const TimelineDate = styled.h3` 
+    font-size: 26px;  
+    position: relative;
+    width:100%;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translateX(-50%); 
+        width: 25px;
+        height: 25px;
+        background-color: #ffff;
+        border-radius: 50%;
+        z-index: 1;
+    }
+`;

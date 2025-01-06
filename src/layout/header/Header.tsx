@@ -6,6 +6,7 @@ import { SocialMedia } from '../../components/socialMedia/SocialMedia';
 import { Container } from '../../components/Container';
 import { FlexWrapper } from '../../components/FlexWrapper';
 import { theme } from '../../styles/Theme';
+import { MobileMenu } from './mobileMenu.tsx/MobileMenu';
 
 const items=['Projects','Technologies','About']
 
@@ -17,6 +18,7 @@ export const Header = () => {
                 <FlexWrapper justify='space-around' align='center'>
                     <Logo/>
                     <Menu menuItems={items}/>
+                    <MobileMenu menuItems={items}/>
                     <SocialMedia/>
                 </FlexWrapper>             
             </Container>                      

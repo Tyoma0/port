@@ -5,5 +5,10 @@ export const theme = {
         font:'#FFFFFF',
         headerFont:'#0f16247a',
         MainTextFont:'#BCBCBC',
+    },
+
+    media:{
+        tablet:'(max-width:768px)',
+        mabile:'(max-width:576px)',
     }
 }

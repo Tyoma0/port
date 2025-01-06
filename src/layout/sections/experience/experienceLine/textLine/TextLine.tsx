@@ -18,7 +18,8 @@ const StyledText = styled.p`
      font-size: 14px;
     margin-top: 30px; 
     text-align: center;
-    min-width:260px;
-min-height:135px;
+    max-width:260px;
+    width:100%;
+    
 
 `
