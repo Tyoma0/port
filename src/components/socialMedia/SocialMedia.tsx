@@ -1,6 +1,7 @@
 
 import styled from 'styled-components';
 import { Icon } from '../icon/Icon';
+import { theme } from '../../styles/Theme';
 
 export const SocialMedia = () => {
     return (
@@ -28,6 +29,8 @@ max-height:32px;
         transform:scale(1.1);
     }
     
-    
+    @media ${theme.media.tablet} {
+        display:none
+     }
    
 `

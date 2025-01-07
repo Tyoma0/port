@@ -38,7 +38,7 @@ display: none;
 `
 const MobileMenuWrapper =styled.div<{isOpen:boolean}>`
 position: fixed;
-background-color:#1d1818;
+background-color:#ffffff;
 top: 0;
 right: 0;
 left: 0;
@@ -64,7 +64,7 @@ const BurgerButton = styled.button<{isOpen:boolean}>`
     top:-100px;
     right:-100px;
     z-index:999999 ;
-    background-color:${theme.colors.headerFont};
+    background-color:rgba(255,255,255,0);
 
     span{
         display: block;
@@ -84,7 +84,7 @@ const BurgerButton = styled.button<{isOpen:boolean}>`
         display: block;
         width:36px;
         height:2px;
-        background-color:${theme.colors.font};
+        background-color:${theme.colors.font}; 
         position:absolute;
         transform:translateY(-10px);
 
