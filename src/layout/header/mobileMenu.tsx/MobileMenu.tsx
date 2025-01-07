@@ -63,7 +63,7 @@ const BurgerButton = styled.button<{isOpen:boolean}>`
     height:200px;
     top:-100px;
     right:-100px;
-    z-index:99999 ;
+    z-index:999999 ;
     background-color:${theme.colors.headerFont};
 
     span{
