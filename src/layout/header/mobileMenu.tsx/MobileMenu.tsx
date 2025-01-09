@@ -18,7 +18,8 @@ export const MobileMenu = (props: {menuItems:Array<string>}) => {
                 <a href="">{item}</a>
                 </li>
         })}
-        </ul>
+        
+        </ul>          
         </MobileMenuWrapper>
 
         
@@ -27,6 +28,8 @@ export const MobileMenu = (props: {menuItems:Array<string>}) => {
     </StyledMobileMenu>
     );
 };
+
+
 
 const StyledMobileMenu = styled.nav`
 display: none;
@@ -38,21 +41,26 @@ display: none;
 `
 const MobileMenuWrapper =styled.div<{isOpen:boolean}>`
 position: fixed;
-background-color:#ffffff;
+background-color:#534f4ff0;
 top: 0;
 right: 0;
 left: 0;
 bottom: 0;
 z-index:9999;
 display: none;
+font-size:30px;
+
+
 ${props => props.isOpen && css<{isOpen:boolean}>`
     display: flex;
     justify-content:center;
-    align-items:center
+    align-items:center;
+    
+    
 `}
     ul{
         display: flex;
-        gap:75px;
+        gap:55px;
         flex-direction:column;
         align-items:center
     }
@@ -76,7 +84,7 @@ const BurgerButton = styled.button<{isOpen:boolean}>`
         bottom:50px;
 
         ${props => props.isOpen && css<{isOpen:boolean}>`
-        color:rgba(255,255,255,0);
+         color:rgba(255,255,255,0); 
         `}
 
         &::before{

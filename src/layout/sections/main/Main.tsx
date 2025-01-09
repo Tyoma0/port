@@ -32,13 +32,26 @@ export const Main = () => {
 const DivText = styled.div`
    display: flex;
    flex-direction:column;
-   align-items:flex-start
+   align-items:flex-start;
+   @media ${theme.media.tablet}{
+        display: flex;
+        align-items:center;
+        justify-content:center;
+        padding-bottom:30px;
+        
+    }
 `
 
 const FirstDiv = styled.section`
     height:100vh;
     display: flex;
-    max-height:700px
+    
+
+    @media ${theme.media.tablet}{
+        min-height:1100px
+    }
+        
+    
 `
 
 const Foto = styled.img`
@@ -57,6 +70,7 @@ const FotoWrapper = styled.div`
     border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
     box-shadow: 5px 5px 50px 5px rgba(53, 189, 223, 0.5);
+    
 `;
 const GradientBorder = styled.div`
 position: absolute;

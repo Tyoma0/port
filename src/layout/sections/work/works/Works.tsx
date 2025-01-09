@@ -1,5 +1,6 @@
 
 import styled from 'styled-components';
+import { theme } from '../../../../styles/Theme';
 
 
 
@@ -37,7 +38,12 @@ border:1px solid rgba(163, 157, 157, 1);
     padding:25px;
 
 
-    
+    @media ${theme.media.tablet}{
+        min-width:400px; 
+        display: flex;
+        flex-direction:column;
+        align-items:center
+    }
 `
 const Image = styled.img`
      max-height:280px;
@@ -73,8 +79,9 @@ justify-content:center;
 align-items:center;
 border-radius:83px;
 background: linear-gradient(to right, #945dd6, #6978d1, #13adc7);
+color:#fff;
 &:hover{
     transform:scale(1.1);
-    
+    color:#fff;
 }
 `
