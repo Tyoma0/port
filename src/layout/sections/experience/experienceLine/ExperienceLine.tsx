@@ -47,7 +47,7 @@ const Timeline = styled.div`
         transform: translateX(-50% );
         width: 100%;
         height: 8px; 
-        background: linear-gradient(to bottom, #945dd6, #6978d1, #13adc7);
+        background: linear-gradient(to right, #945dd6, #6978d1, #13adc7);
         z-index: 1;
     }          
 `;
