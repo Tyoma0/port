@@ -43,7 +43,7 @@ const DivText = styled.div`
 `
 
 const FirstDiv = styled.section`
-    height:100vh;
+    height:50vh;
     display: flex;
     
 

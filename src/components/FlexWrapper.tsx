@@ -18,10 +18,5 @@ export const FlexWrapper = styled.div<FlexWrapperType>`
   height:100%;
   gap:${props => props.gap || '0'};
 
-  @media ${theme.media.tablet}{
-        display: flex;
-        flex-direction:column;
-        align-items:center;
-        justify-content:center
-    }
+ 
 `

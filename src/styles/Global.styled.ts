@@ -29,7 +29,7 @@ a{
     text-decoration:none;
     
 display: flex;
-
+color:${theme.colors.font}
 
 }
 

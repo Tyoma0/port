@@ -36,6 +36,7 @@ display: none;
     
         @media ${theme.media.tablet}{
             display: block;
+            
         }
     
 `

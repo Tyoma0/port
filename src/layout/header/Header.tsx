@@ -16,7 +16,9 @@ export const Header = () => {
         <StyledHeader>
             <Container>
                 <FlexWrapper justify='space-around' align='center'>
+                    <LogoWrapper>
                     <Logo/>
+                    </LogoWrapper>                   
                     <Menu menuItems={items}/>
                     <MobileMenu menuItems={items}/>
                     <SocialMedia/>
@@ -35,4 +37,10 @@ const StyledHeader = styled.header`
     right: 0;
     z-index:99999;
     
+`
+const LogoWrapper = styled.div`
+    @media ${theme.media.tablet} {
+        transform: scale(1.5); 
+        
+    }
 `

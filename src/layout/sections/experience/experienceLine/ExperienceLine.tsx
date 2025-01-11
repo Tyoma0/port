@@ -30,13 +30,15 @@ export const ExperienceLine = () => {
 };
 
 const MainDiv = styled.div`
+  display: flex; 
+  justify-content:center
    
-  
 `;
 
 const Timeline = styled.div`
     display: flex; 
     position: relative;
+    justify-content:center;
     
     
     &::after {
@@ -77,4 +79,6 @@ const TimelineDate = styled.h3`
         border-radius: 50%;
         z-index: 1;
     }
+
+    
 `;
