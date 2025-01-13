@@ -21,7 +21,7 @@ export const Skill = () => {
               
             
             <StyledDiv>
-            <StyledSpan>Additional technolgies and skills</StyledSpan>
+            <StyledTitleSkills>Additional technolgies and skills</StyledTitleSkills>
             <StyledUl>
                 <StyledLi><Icon width='100' height='100' viewBox="0 0 100 100"  iconId={'group'}/></StyledLi>
                 <StyledLi><Icon width='100' height='100' viewBox="0 0 100 100" iconId={'gitHub2'}/></StyledLi>
@@ -45,7 +45,7 @@ export const Skill = () => {
    margin-top:120px
     
  `
- const StyledSpan = styled.span`
+ const StyledTitleSkills = styled.h3`
     font-size:44px;
     margin-bottom:70px
  `

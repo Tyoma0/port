@@ -22,7 +22,7 @@ export const Works = (props:WorksPropsType) => {
 };
 
 
-const StyledWorks = styled.div`
+const StyledWorks = styled.article`
 border:1px solid rgba(163, 157, 157, 1);
 
     background-color:#0F1624;

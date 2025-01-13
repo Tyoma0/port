@@ -5,6 +5,7 @@ import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Button } from '../../../components/Button';
 import { theme } from '../../../styles/Theme';
 import { Container } from '../../../components/Container';
+import { font } from '../../../styles/Common';
 
 
 export const Main = () => {
@@ -12,7 +13,7 @@ export const Main = () => {
         <FirstDiv>
             
 <Container>
-<FlexWrapper align='center' justify='space-between'>
+<FlexWrapper align='center' justify='space-between' wrap='wrap'>
             <DivText>
                 <MainTitle>Lorem ipsum dolor amet</MainTitle>
                 <MainP>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</MainP>
@@ -33,6 +34,7 @@ const DivText = styled.div`
    display: flex;
    flex-direction:column;
    align-items:flex-start;
+   text-align:start;
    @media ${theme.media.tablet}{
         display: flex;
         align-items:center;
@@ -43,7 +45,7 @@ const DivText = styled.div`
 `
 
 const FirstDiv = styled.section`
-    height:50vh;
+    height:70vh;
     display: flex;
     
 
@@ -102,9 +104,16 @@ position: absolute;
 
 
 const MainTitle = styled.h1`
-font-size: 54px;
-line-height: 81px;
-padding-bottom:5px
+${font({family:"'Poppins', sans-serif", weight:700,Fmax:54,Fmin:45})};
+ font-size: 54px;
+line-height: 81px; 
+padding-bottom:5px;
+@media ${theme.media.tablet}{
+    font-size: calc((100vw - 360px) / (1440px - 360px) * (54px - 45px) + 45px);
+    font-size:35px
+}
+    
+
 `
 const MainP = styled.p`
 font-size: 18px;
