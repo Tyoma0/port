@@ -13,7 +13,7 @@ export const Main = () => {
         <FirstDiv>
             
 <Container>
-<FlexWrapper align='center' justify='space-between' wrap='wrap'>
+<FlexWrapper align='center' justify='space-around' wrap='wrap'>
             <DivText>
                 <MainTitle>Lorem ipsum dolor amet</MainTitle>
                 <MainP>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</MainP>
@@ -39,13 +39,13 @@ const DivText = styled.div`
         display: flex;
         align-items:center;
         justify-content:center;
-        padding-bottom:30px;
+        padding-bottom:10px;
         
     }
 `
 
 const FirstDiv = styled.section`
-    height:70vh;
+    height:80vh;
     display: flex;
     
 

@@ -5,6 +5,7 @@ import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Icon } from '../../../components/icon/Icon';
 import { Skills } from './skills/Skills';
 import { Container } from '../../../components/Container';
+import { font } from '../../../styles/Common';
 
 
 export const Skill = () => {
@@ -47,7 +48,8 @@ export const Skill = () => {
  `
  const StyledTitleSkills = styled.h3`
     font-size:44px;
-    margin-bottom:70px
+    margin-bottom:70px;
+    ${font({family: "'Poppins', sans-serif", weight: 600, Fmax: 44, Fmin: 35})};
  `
   const StyledUl = styled.ul`
     display: flex;

@@ -13,6 +13,7 @@ border:none;
 font-size: 20px;
 font-family:'Poppins';
 transition: transform 0.3s ease-in-out;
+margin-bottom:20px;
 &:hover{
    transform:scale(1.1);
    cursor:pointer;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { font } from "../styles/Common";
 
 type SectionTitleProps = {
 font?:string
@@ -14,5 +15,8 @@ export const SectionTitle = styled.h2<SectionTitleProps>`
   color:${props =>props.color|| '#FFFFFF'};
   display: flex;
 justify-content:flex-start;
-padding-bottom:70px
+padding-bottom:70px;
+  ${font({family: "'Poppins', sans-serif", weight: 700, Fmax: 46, Fmin: 35})};
+  
+
 `

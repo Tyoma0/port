@@ -11,7 +11,7 @@ export const Footer = () => {
     return (
         <StyledFooter>
             <Container>
-            <FlexWrapper justify='space-around' align='center'>
+            <FlexWrapper justify='space-around' align='center' >
             <FooterSpan><a href='tel'>Call me: 123-456-789</a></FooterSpan>
             <FooterSpan><a href="#">Email: xxx@xyz.com</a></FooterSpan>
             <SocialMedia/>
@@ -25,7 +25,8 @@ const StyledFooter = styled.footer`
     background-color:#0F1624;
     min-height:20vh;
     display: flex;
-    min-height:150px
+    min-height:150px;
+    
 `
 const FooterSpan = styled.span`
 background-color:${theme.colors.primaryBg};

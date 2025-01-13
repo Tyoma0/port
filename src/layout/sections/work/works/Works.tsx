@@ -1,6 +1,7 @@
 
 import styled from 'styled-components';
 import { theme } from '../../../../styles/Theme';
+import { font } from '../../../../styles/Common';
 
 
 
@@ -39,10 +40,11 @@ border:1px solid rgba(163, 157, 157, 1);
 
 
     @media ${theme.media.tablet}{
-        min-width:400px; 
+        min-width:340px; 
         display: flex;
         flex-direction:column;
-        align-items:center
+        align-items:center;
+        min-height:500px;
     }
 `
 const Image = styled.img`
@@ -61,12 +63,30 @@ const Image = styled.img`
 `
 const Title = styled.h3`
     font-size: 30px;
-    margin:0 auto;
-    margin-bottom:67px;
-`
+    margin: 0 auto;
+    margin-bottom: 67px;
+    text-align: center; 
+    position: relative; 
+    ${font({family: "'Poppins', sans-serif", weight: 600, Fmax: 30, Fmin: 25})};
+
+    &::after {
+        content: '';
+        display: block;
+        width: 300px;
+        height: 4px;
+        background-color: ${theme.colors.font};
+        position: absolute;
+        left: 50%; 
+        transform: translateX(-50%); 
+        bottom: -30px;
+        background: linear-gradient(to right, #945dd6, #6978d1, #13adc7);
+               
+    }
+`;
 const Text = styled.p`
     font-size: 18px;
     margin-bottom:50px;
+    ${font({family: "'Poppins', sans-serif", weight: 500, Fmax: 18, Fmin: 14})};
 `
 const Link = styled.a`
 font-size:20px;
