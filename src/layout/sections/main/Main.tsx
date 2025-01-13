@@ -104,15 +104,8 @@ position: absolute;
 
 
 const MainTitle = styled.h1`
-${font({family:"'Poppins', sans-serif", weight:700,Fmax:54,Fmin:45})};
- font-size: 54px;
-line-height: 81px; 
-padding-bottom:5px;
-@media ${theme.media.tablet}{
-    font-size: calc((100vw - 360px) / (1440px - 360px) * (54px - 45px) + 45px);
-    font-size:35px
-}
-    
+${font({family: "'Poppins', sans-serif", weight: 700, Fmax: 54, Fmin: 45})};
+margin-bottom: 5px;
 
 `
 const MainP = styled.p`
