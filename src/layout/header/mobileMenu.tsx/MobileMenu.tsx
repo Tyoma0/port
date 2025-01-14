@@ -1,17 +1,20 @@
 
 import styled, { css } from 'styled-components';
 import { theme } from '../../../styles/Theme';
+import { useState } from 'react';
 
 
 
 
 export const MobileMenu = (props: {menuItems:Array<string>}) => {
+    const [menuIsOpen,setMenuOpen] = useState(false)
+    const onBurgerBtnClick =() =>{setMenuOpen(!menuIsOpen)}
     return (
     <StyledMobileMenu>
-        <BurgerButton isOpen={false}>
+        <BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
             <span></span>
         </BurgerButton>
-        <MobileMenuWrapper isOpen={false}>
+        <MobileMenuWrapper isOpen={menuIsOpen} onClick={()=>{setMenuOpen(false)}}>
         <ul>
         {props.menuItems.map((item,index)=>{
             return <li key={index}>
@@ -86,7 +89,7 @@ const BurgerButton = styled.button<{isOpen:boolean}>`
         bottom:50px;
 
         ${props => props.isOpen && css<{isOpen:boolean}>`
-         color:rgba(255,255,255,0); 
+         background-color:rgba(255,255,255,0); 
         `}
 
         &::before{
