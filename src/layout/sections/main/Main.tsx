@@ -6,7 +6,7 @@ import { Button } from '../../../components/Button';
 import { theme } from '../../../styles/Theme';
 import { Container } from '../../../components/Container';
 import { font } from '../../../styles/Common';
-
+import Typewriter from 'typewriter-effect';
 
 export const Main = () => {
     return (
@@ -17,7 +17,16 @@ export const Main = () => {
             <DivText>
                 <MainTitle>Lorem ipsum dolor amet</MainTitle>
                 <MainP>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</MainP>
-                <Button>Let’s Begin</Button>
+                <Button>
+                <Typewriter
+                    options={{
+                    strings: ['Contact me :)'],
+                    autoStart: true,
+                    loop: true,
+                    delay: 100,
+                        }}
+                    />
+                </Button>
             </DivText>
             <FotoWrapper>
             <Foto src={foto} alt="" />
