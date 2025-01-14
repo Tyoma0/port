@@ -5,18 +5,20 @@ import { Work } from './layout/sections/work/Work';
 import { Skill } from './layout/sections/skill/Skill';
 import { Footer } from './layout/footer/Footer';
 import { Experience } from './layout/sections/experience/Experience';
-
+import { Particle } from './components/Particle';
+import { GoTopBtn } from './components/goTopBtn/goTopBtn';
 
 function App() {
     return (
         <div className="App">
-            
+            <Particle />
            <Header/>
            <Main/>
            <Work/>
            <Skill />
            <Experience />
            <Footer />
+           <GoTopBtn />
         </div>
     );
 }

@@ -7,6 +7,7 @@ import { theme } from '../../../styles/Theme';
 import { Container } from '../../../components/Container';
 import { font } from '../../../styles/Common';
 import Typewriter from 'typewriter-effect';
+import Tilt from 'react-parallax-tilt';
 
 export const Main = () => {
     return (
@@ -28,10 +29,13 @@ export const Main = () => {
                     />
                 </Button>
             </DivText>
+            <Tilt>
             <FotoWrapper>
             <Foto src={foto} alt="" />
             <GradientBorder />
             </FotoWrapper>
+            </Tilt>
+            
                 
             </FlexWrapper>
 </Container>            

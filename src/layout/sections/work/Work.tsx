@@ -24,6 +24,6 @@ export const Work = () => {
 };
 
 const StyledWork = styled.section`
-    
+    position: relative;
 `
 

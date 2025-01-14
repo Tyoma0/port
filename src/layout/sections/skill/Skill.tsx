@@ -37,7 +37,7 @@ export const Skill = () => {
 
  const StyledSkill = styled.section`
     min-height: 100vh;
-    
+    position: relative;
  `
  const StyledDiv = styled.div`
    display: flex;

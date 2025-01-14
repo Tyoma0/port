@@ -18,5 +18,6 @@ export const Experience = () => {
 
 const StyledExperience = styled.section`
     height:100vh;
-   height:600px
+   height:600px;
+   position: relative;
 `
