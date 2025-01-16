@@ -45,6 +45,9 @@ button{
 
  section{
     padding:80px 0;
+    @media ${theme.media.mabile} {
+        padding:70px 0
+    }
     
 }
 

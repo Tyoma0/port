@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { TextLine } from './textLine/TextLine';
+import { theme } from '../../../../styles/Theme';
 
 export const ExperienceLine = () => {
     return (
@@ -51,7 +52,20 @@ const Timeline = styled.div`
         height: 8px; 
         background: linear-gradient(to right, #945dd6, #6978d1, #13adc7);
         z-index: 1;
-    }          
+        max-width:760px;
+        width: calc(100% - 195px);
+
+        @media (max-width: 768px) {
+            width:8px;
+            height:450px;
+            top:-0%;
+            background: linear-gradient(to bottom, #945dd6, #6978d1, #13adc7);
+            
+        }
+    } 
+    @media (max-width: 768px) {
+            flex-direction:column
+        }        
 `;
 
 const TimelineItem = styled.div`
@@ -78,7 +92,13 @@ const TimelineDate = styled.h3`
         background-color: #ffff;
         border-radius: 50%;
         z-index: 1;
+        @media (max-width: 768px) {           
+        left:36%           
+        }
     }
-
+    @media (max-width: 768px) {           
+        top:-30%;
+        left:38px            
+        }
     
 `;

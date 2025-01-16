@@ -28,7 +28,7 @@ border:1px solid rgba(163, 157, 157, 1);
 
     background-color:#0F1624;
     width:48%;
-    
+    flex-grow:1; 
     max-width:550px;
     min-height:670px;
     border-top-left-radius:50px;
@@ -80,7 +80,9 @@ const Title = styled.h3`
         transform: translateX(-50%); 
         bottom: -30px;
         background: linear-gradient(to right, #945dd6, #6978d1, #13adc7);
-               
+        @media ${theme.media.mabile} {
+            width:180px
+        }      
     }
 `;
 const Text = styled.p`
