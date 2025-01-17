@@ -16,17 +16,16 @@ export const Main = () => {
 <Container>
 <FlexWrapper align='center' justify='space-around' wrap='wrap'>
             <DivText>
-                <MainTitle>Lorem ipsum dolor amet</MainTitle>
-                <MainP>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</MainP>
-                <Button>
-                <Typewriter
-                    options={{
-                    strings: ['Contact me :)'],
+                <MainTitle>
+                    <Typewriter options={{
+                    strings: ['Lorem ipsum dolor amet'],
                     autoStart: true,
                     loop: true,
                     delay: 100,
-                        }}
-                    />
+                        }}/>
+                    </MainTitle>
+                <MainP>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</MainP>
+                <Button>Contact me :)
                 </Button>
             </DivText>
             <Tilt>

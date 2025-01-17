@@ -11,7 +11,7 @@ export const Footer = () => {
     return (
         <StyledFooter>
             <Container>
-            <FlexWrapper justify='space-around' align='center' >
+            <FlexWrapper justify='space-evenly' align='center' >
             <FooterSpan><a href='tel'>Call me: 123-456-789</a></FooterSpan>
             <FooterSpan><a href="#">Email: xxx@xyz.com</a></FooterSpan>
             <SocialMedia/>
@@ -35,4 +35,5 @@ background-color:${theme.colors.primaryBg};
     font-size: 15px;
     font-weight: 600;
     line-height: 33px;
+    padding:20px
 `

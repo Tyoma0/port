@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme } from "../styles/Theme";
+
 
 
 type FlexWrapperType ={
@@ -19,9 +19,4 @@ export const FlexWrapper = styled.div<FlexWrapperType>`
   height:100%;
   gap:${props => props.gap || '0'};
 
- @media ${theme.media.tablet}{
-  justify-content:center
- }
-  
- 
 `

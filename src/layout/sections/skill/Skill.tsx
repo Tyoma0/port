@@ -6,6 +6,7 @@ import { Icon } from '../../../components/icon/Icon';
 import { Skills } from './skills/Skills';
 import { Container } from '../../../components/Container';
 import { font } from '../../../styles/Common';
+import { theme } from '../../../styles/Theme';
 
 
 export const Skill = () => {
@@ -35,7 +36,7 @@ export const Skill = () => {
 };
 
 
- const StyledSkill = styled.section`
+const StyledSkill = styled.section`
     min-height: 100vh;
     position: relative;
  `
@@ -59,6 +60,12 @@ export const Skill = () => {
     
   `
    const StyledLi = styled.li`
+   @media ${theme.media.tablet} {
+    svg {
+      width: 65px;
+      height: 65px;
+    }
+   }
     
     
    `
