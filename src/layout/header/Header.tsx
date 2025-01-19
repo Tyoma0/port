@@ -8,7 +8,7 @@ import { FlexWrapper } from '../../components/FlexWrapper';
 import { theme } from '../../styles/Theme';
 import { MobileMenu } from './mobileMenu.tsx/MobileMenu';
 
-const items=['Projects','Technologies','About']
+const items=['Projects','Technologies','Experience']
 
 
 export const Header = () => {
