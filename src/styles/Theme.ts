@@ -5,6 +5,7 @@ export const theme = {
         font:'#FFFFFF',
         headerFont:'#0f16247a',
         MainTextFont:'#BCBCBC',
+        formFon:'#93a7bd',
     },
 
     media:{

@@ -7,18 +7,20 @@ import { Footer } from './layout/footer/Footer';
 import { Experience } from './layout/sections/experience/Experience';
 import { Particle } from './components/Particle';
 import { GoTopBtn } from './components/goTopBtn/goTopBtn';
+import { Contact } from './layout/sections/contact/Contact';
 
 function App() {
     return (
         <div className="App">
             <Particle />
-           <Header/>
-           <Main/>
-           <Work/>
-           <Skill />
-           <Experience />
-           <Footer />
-           <GoTopBtn />
+        <Header/>
+        <Main/>
+        <Work/>
+        <Skill />
+        <Experience />
+        <Contact />
+        <Footer />
+        <GoTopBtn />
         </div>
     );
 }
