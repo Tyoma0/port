@@ -46,7 +46,7 @@ export const Contact = () => {
     };
 
     return (
-        <StyledContact>
+        <StyledContact id="contact">
             <Container>
                 <SectionTitle>Contact</SectionTitle>
                 <StyledForm ref={form} onSubmit={sendEmail}>

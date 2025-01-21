@@ -2,12 +2,13 @@
 import styled from 'styled-components';
 import foto from './../../../assets/images/MainFoto.webp'
 import { FlexWrapper } from '../../../components/FlexWrapper';
-import { Button } from '../../../components/Button';
 import { theme } from '../../../styles/Theme';
 import { Container } from '../../../components/Container';
 import { font } from '../../../styles/Common';
 import Typewriter from 'typewriter-effect';
 import Tilt from 'react-parallax-tilt';
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+
 
 export const Main = () => {
     return (
@@ -25,8 +26,13 @@ export const Main = () => {
                         }}/>
                     </MainTitle>
                 <MainP>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</MainP>
-                <Button>Contact me :)
-                </Button>
+                <ScrollLink 
+    to="contact" 
+    smooth={true} 
+    duration={500} 
+    style={{ textDecoration: 'none' }}
+><Link>Contact me :)</Link>
+</ScrollLink>
             </DivText>
             <Tilt>
             <FotoWrapper>
@@ -54,6 +60,27 @@ const DivText = styled.div`
         padding-bottom:10px;
         
     }
+`
+
+export const Link = styled.a`
+   background: linear-gradient(to right, #945dd6, #6978d1, #13adc7);
+color: ${theme.colors.font};
+min-width: 240px;
+min-height:60px;
+border-radius:83px;
+display: flex;
+align-items:center;
+justify-content:center;
+border:none;
+font-size: 20px;
+font-family:'Poppins';
+transition: transform 0.3s ease-in-out;
+margin-bottom:20px;
+&:hover{
+   transform:scale(1.1);
+   cursor:pointer;
+}
+
 `
 
 const FirstDiv = styled.section`
