@@ -1,46 +1,39 @@
-
-import styled from 'styled-components';
+import React from 'react';
 import { Logo } from '../../components/logo/Logo';
-import { Menu } from '../../components/menu/Menu';
 import { SocialMedia } from '../../components/socialMedia/SocialMedia';
 import { Container } from '../../components/Container';
 import { FlexWrapper } from '../../components/FlexWrapper';
-import { theme } from '../../styles/Theme';
-import { MobileMenu } from './mobileMenu.tsx/MobileMenu';
+import { MobileMenu } from './headerMenu/mobileMenu.tsx/MobileMenu';
+import { DesktopMenu } from './headerMenu/desktopMenu/DesktopMenu';
+import { S } from './Header_Styles';
 
-const items=['Projects','Technologies','Experience']
 
 
-export const Header = () => {
+export const Header:React.FC = () => {
+
+const [width, setWidth] = React.useState(window.innerWidth);
+const breakpoint = 768;
+
+
+React.useEffect(()=>{
+    const handleWindowResize = ()=> setWidth(window.innerWidth)
+    window.addEventListener("resize", handleWindowResize);
+    return ()=>window.removeEventListener("resize",handleWindowResize);
+},[])
+
     return (
-        <StyledHeader>
+        <S.Header>
             <Container>
                 <FlexWrapper justify='space-around' align='center'>
-                    <LogoWrapper>
+                    <S.LogoWrapper>
                     <Logo/>
-                    </LogoWrapper>                   
-                    <Menu menuItems={items}/>
-                    <MobileMenu menuItems={items}/>
+                    </S.LogoWrapper>    
+                    {width< breakpoint ? <MobileMenu />
+                    :<DesktopMenu />}                                                       
                     <SocialMedia/>
                 </FlexWrapper>             
             </Container>                      
-        </StyledHeader>
+        </S.Header>
     );
 };
 
-const StyledHeader = styled.header`
-    background-color:${theme.colors.headerFont};
-    padding:20px 0;
-    position:fixed;
-    top:0;
-    left: 0;
-    right: 0;
-    z-index:99999;
-    
-`
-const LogoWrapper = styled.div`
-    @media ${theme.media.tablet} {
-        transform: scale(1.5); 
-        
-    }
-`

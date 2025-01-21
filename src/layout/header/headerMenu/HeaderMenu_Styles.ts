@@ -1,47 +1,28 @@
+import styled, { css } from "styled-components"
+import { theme } from "../../../styles/Theme"
+import {Link} from 'react-scroll'
 
-import styled, { css } from 'styled-components';
-import { theme } from '../../../styles/Theme';
-import { useState } from 'react';
-
-
-
-
-export const MobileMenu = (props: {menuItems:Array<string>}) => {
-    const [menuIsOpen,setMenuOpen] = useState(false)
-    const onBurgerBtnClick =() =>{setMenuOpen(!menuIsOpen)}
-    return (
-    <StyledMobileMenu>
-        <BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
-            <span></span>
-        </BurgerButton>
-        <MobileMenuWrapper isOpen={menuIsOpen} onClick={()=>{setMenuOpen(false)}}>
-        <ul>
-        {props.menuItems.map((item,index)=>{
-            return <li key={index}>
-                <a href="">{item}</a>
-                </li>
-        })}
-        
-        </ul>          
-        </MobileMenuWrapper>
-
-        
-
-        
-    </StyledMobileMenu>
-    );
-};
-
-
-
-const StyledMobileMenu = styled.nav`
-display: none;
-    
-        @media ${theme.media.tablet}{
-            display: block;
-            
+const MenuItem = styled.li`
+       
+`
+const NavLink = styled(Link)`
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+        &:hover, &.active{
+            transform:scale(1.1);
+        background: linear-gradient(to right, #945dd6, #6978d1, #13adc7);
+            -webkit-background-clip: text; /* Для WebKit-браузеров */
+            background-clip: text; /* Стандартное свойство */
+            -webkit-text-fill-color: transparent; /* Делаем текст прозрачным */
+            color: transparent; /* Стандартное свойство для прозрачного текста */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Добавляем тень */
         }
-    
+`
+
+
+//MobileMenu
+
+const MobileMenu = styled.nav`           
 `
 const MobileMenuWrapper =styled.div<{isOpen:boolean}>`
 position: fixed;
@@ -122,3 +103,23 @@ const BurgerButton = styled.button<{isOpen:boolean}>`
 
     }
 `
+
+//DesktopMenu
+
+const DesktopMenu = styled.nav`
+ul{
+    display: flex;
+    gap:75px;
+    justify-content:center
+} 
+`
+
+
+export const S = {
+    NavLink,
+    MenuItem,
+    MobileMenu,
+    MobileMenuWrapper,
+    BurgerButton,
+    DesktopMenu,
+}

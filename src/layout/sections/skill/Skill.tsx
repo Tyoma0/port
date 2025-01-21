@@ -11,7 +11,7 @@ import { theme } from '../../../styles/Theme';
 
 export const Skill = () => {
     return (
-        <StyledSkill>
+        <StyledSkill id='technologies'>
             <Container>
             <SectionTitle>Technologies</SectionTitle>
             <FlexWrapper direction='column' align='center'>

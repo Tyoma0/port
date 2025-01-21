@@ -1,20 +1,22 @@
 
 import styled from 'styled-components';
-import { theme } from '../../styles/Theme';
 
 
 
-export const Menu = (props: {menuItems:Array<string>}) => {
+
+const items=[ 'Projects','Technologies','Experience'
+]
+
+export const Menu: React.FC = () => {
     return (
-    <StyledMenu>
-        <ul>
-
-        {props.menuItems.map((item,index)=>{
-            return <li key={index}>
-                <a href="">{item}</a>
-                </li>
+    <StyledMenu >
+         <ul>
+        {items.map((item,index)=>{
+            return <ListItem key={index}>
+                <Link href="">{item}</Link>
+            </ListItem>
         })}
-        </ul>
+                    </ul>
     </StyledMenu>
     );
 };
@@ -24,21 +26,21 @@ const StyledMenu = styled.nav`
         display: flex;
         gap:75px;
     }
-    li{
+    
+`
+
+const ListItem = styled.li`
         transition: transform 0.3s ease-in-out;
-    }
-    li:hover{
-        transform:scale(1.1);
+        &:hover{
+            transform:scale(1.1);
         background: linear-gradient(to right, #945dd6, #6978d1, #13adc7);
             -webkit-background-clip: text; /* Для WebKit-браузеров */
             background-clip: text; /* Стандартное свойство */
             -webkit-text-fill-color: transparent; /* Делаем текст прозрачным */
             color: transparent; /* Стандартное свойство для прозрачного текста */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Добавляем тень */
-    }
-
-     @media ${theme.media.tablet} {
-        display:none
-     }
+        }
+`
+const Link = styled.a`
     
 `

@@ -8,7 +8,7 @@ import { Container } from '../../../components/Container';
 
 export const Work = () => {
     return (
-        <StyledWork>
+        <StyledWork id='works'>
         <Container> 
         <SectionTitle>Projects</SectionTitle>       
         <FlexWrapper gap='40px' wrap='wrap'  >

@@ -7,7 +7,7 @@ import { Container } from '../../../components/Container';
 
 export const Experience = () => {
     return (
-        <StyledExperience>
+        <StyledExperience id='experience'>
             <Container>
             <SectionTitle>Experience</SectionTitle>               
                 <ExperienceLine/>                          
