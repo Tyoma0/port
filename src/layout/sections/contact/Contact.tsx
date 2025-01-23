@@ -91,7 +91,7 @@ const StyledForm = styled.form`
 
 const Field = styled.input`
     width: 100%;
-    border: 1px solid #4b6581;
+    border: 1px solid #7376799b;
     background-color: ${theme.colors.formFon};
     padding: 7px 15px;
     font-family: 'Poppins';
@@ -117,7 +117,7 @@ const ThankYouPopup = styled.div`
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5); 
     display: flex;
     justify-content: center;
     align-items: center;

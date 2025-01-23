@@ -73,7 +73,7 @@ const TimelineItem = styled.div`
     flex-direction: column;
     align-items: center;
     position: relative;
-    z-index: 999999;
+    z-index: 9999;
 `;
 
 const TimelineDate = styled.h3` 
