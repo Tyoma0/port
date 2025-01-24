@@ -79,7 +79,7 @@ const StyledForm = styled.form`
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 15ggpx;
+    gap: 16px;
     margin: 0 auto;
     align-items: center;
 
