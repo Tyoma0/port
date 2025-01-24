@@ -35,7 +35,7 @@ export const Contact = () => {
         if (isThankYouPopupVisible) {
             const timer = setTimeout(() => {
                 setThankYouPopupVisible(false); // Скрываем всплывающее окно
-            }, 10000); // 10 секунд
+            }, 5000); // 5 секунд
 
             return () => clearTimeout(timer); // Очистка таймера при размонтировании
         }
@@ -79,7 +79,7 @@ const StyledForm = styled.form`
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 15ggpx;
     margin: 0 auto;
     align-items: center;
 
