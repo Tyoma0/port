@@ -17,7 +17,7 @@ export const Experience = () => {
 };
 
 const StyledExperience = styled.section`
-    height:65vh;
+    height:60vh;
    min-height:650px;
    position: relative;
 `
