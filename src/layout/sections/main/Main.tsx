@@ -15,7 +15,7 @@ export const Main = () => {
         <FirstDiv>
             
 <Container>
-<FlexWrapper align='center' justify='space-around' wrap='wrap'>
+<FlexWrapper align='center' justify='space-evenly' wrap='wrap'>
             <DivText>
                 <MainTitle>
                     <Typewriter options={{
